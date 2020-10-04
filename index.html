@@ -22,59 +22,59 @@
             <label for="" class="label">Sequence: One</label>
             <div class="field is-grouped is-grouped-multiline">
               <div class="control">
-                <button class="button is-link" id="btnS1P1">Train Pose 1</button>
+                <button class="button is-link" id="sequenceOnePoseOne">Train Pose 1</button>
                 <p class="help">Confidence:
-                <p class="help">No Examples:
+                <p class="help" id="example-sequenceOnePoseOne">No Examples:
               </div>
               <div class="control">
-                <button class="button is-link" id="btnS1P2">Train Pose 2</button>
+                <button class="button is-link" id="sequenceOnePoseTwo">Train Pose 2</button>
                 <p class="help">Confidence:
-                <p class="help">No Examples:
-              </div>
-            </div>
-          </div>
-          <div class="field">
-            <label for="" class="label">Sequence: One</label>
-            <div class="field is-grouped is-grouped-multiline">
-              <div class="control">
-                <button class="button is-link" id="btnS2P1">Train Pose 1</button>
-                <p class="help">Confidence:
-                <p class="help">No Examples:
-              </div>
-              <div class="control">
-                <button class="button is-link" id="btnS2P2">Train Pose 2</button>
-                <p class="help">Confidence:
-                <p class="help">No Examples:
+                <p class="help" id="example-sequenceOnePoseTwo">No Examples:
               </div>
             </div>
           </div>
           <div class="field">
-            <label for="" class="label">Sequence: One</label>
+            <label for="" class="label">Sequence: Two</label>
             <div class="field is-grouped is-grouped-multiline">
               <div class="control">
-                <button class="button is-link" id="btnS3P1">Train Pose 1</button>
+                <button class="button is-link" id="sequenceTwoPoseOne">Train Pose 1</button>
                 <p class="help">Confidence:
-                <p class="help">No Examples:
+                <p class="help" id="example-sequenceTwoPoseOne">No Examples:
               </div>
               <div class="control">
-                <button class="button is-link" id="btnS3P2">Train Pose 2</button>
+                <button class="button is-link" id="sequenceTwoPoseTwo">Train Pose 2</button>
                 <p class="help">Confidence:
-                <p class="help">No Examples:
+                <p class="help" id="example-sequenceTwoPoseTwo">No Examples:
               </div>
             </div>
           </div>
           <div class="field">
-            <label for="" class="label">Sequence: One</label>
+            <label for="" class="label">Sequence: Three</label>
             <div class="field is-grouped is-grouped-multiline">
               <div class="control">
-                <button class="button is-link" id="btnS4P1">Train Pose 1</button>
+                <button class="button is-link" id="sequenceThreePoseOne">Train Pose 1</button>
                 <p class="help">Confidence:
-                <p class="help">No Examples:
+                <p class="help" id="example-sequenceThreePoseOne">No Examples:
               </div>
               <div class="control">
-                <button class="button is-link" id="btnS4P2">Train Pose 2</button>
+                <button class="button is-link" id="sequenceThreePoseTwo">Train Pose 2</button>
                 <p class="help">Confidence:
-                <p class="help">No Examples:
+                <p class="help" id="example-sequenceThreePoseTwo">No Examples:
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <label for="" class="label">Sequence: Four</label>
+            <div class="field is-grouped is-grouped-multiline">
+              <div class="control">
+                <button class="button is-link" id="sequenceFourPoseOne">Train Pose 1</button>
+                <p class="help">Confidence:
+                <p class="help" id="example-sequenceFourPoseOne">No Examples:
+              </div>
+              <div class="control">
+                <button class="button is-link" id="sequenceFourPoseTwo">Train Pose 2</button>
+                <p class="help">Confidence:
+                <p class="help" id="example-sequenceFourPoseTwo">No Examples:
               </div>
             </div>
           </div>
@@ -85,19 +85,33 @@
             Webcam Status: <p id="status"></p>
           </h4>
           <div id="webcam">
-            <video id="video" width="480" height="480" src='' muted autoplay playsinline></video>
+            <video id="video" width="227" height="227" src='' muted autoplay playsinline></video>
+            <h5 class="title is-5">
+              Output:
+            </h5>
+            <p id="predictOutput"></p>
           </div>
         </div>
       </div>
       <div class="columns has-text-centered">
-        <div class="column is-12">
+        <div class="column is-6">
           <div class="field">
             <label for="" class="label">Control</label>
             <div class="field">
               <div class="control">
+                <button class="button is-danger" id="start-train">Start Training</button>
+                <button class="button is-success" id="start-predicting">Start Predicting</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="field">
+            <label for="" class="label">Model</label>
+            <div class="field">
+              <div class="control">
                 <button class="button is-info">Save Model</button>
                 <button class="button is-warning">Load Model</button>
-                <button class="button is-success" id="start-predicting">Start Predicting</button>
               </div>
             </div>
           </div>
