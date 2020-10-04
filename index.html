@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KNN Pose Sequence</title>
+  <script src="dist/build.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <!-- Control -->
+        <div class="column">
+          <div class="field"><label for="" class="label">Sequence: </label>
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-link" id="btnS1P1">Train Pose 1</button>
+                <button class="button is-link" id="btnS1P2">Train Pose 2</button>
+              </div>
+            </div>
+          </div>
+          <div class="field"><label for="" class="label">Sequence: </label>
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-link">Train Pose 1</button>
+                <button class="button is-link">Train Pose 2</button>
+              </div>
+            </div>
+          </div>
+          <div class="field"><label for="" class="label">Sequence: </label>
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-link">Train Pose 1</button>
+                <button class="button is-link">Train Pose 2</button>
+              </div>
+            </div>
+          </div>
+          <div class="field"><label for="" class="label">Sequence: </label>
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-link">Train Pose 1</button>
+                <button class="button is-link">Train Pose 2</button>
+              </div>
+            </div>
+          </div>
+          <div class="field" id="train-button">
+
+          </div>
+        </div>
+        <!-- Webcam -->
+        <div class="column is-8">
+          <h3 class="title">
+            Webcam
+          </h3>
+          <div id="webcam">
+            <video id="video" width="480" height="480" src='' muted autoplay playsinline></video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
