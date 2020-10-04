@@ -1,5 +1,6 @@
 import { KNNImageClassifier } from 'deeplearn-knn-image-classifier';
 import * as dl from 'deeplearn';
+import { rightPad } from 'deeplearn/dist/util';
 
 // Webcam Image size. Must be 227.
 const IMAGE_SIZE = 227;
@@ -8,10 +9,15 @@ const TOPK = 10;
 
 const predictionThreshold = 0.98;
 
-let poseSequenceOne = ['poseOne', 'poseTwo'];
-let poseSequenceTwo = ['poseOne', 'poseTwo'];
-let poseSequenceThree = ['poseOne', 'poseTwo'];
-let poseSequenceFour = ['poseOne', 'poseTwo'];
+const NUM_SEQUENCE = 4;
+const NUM_POSE = 2;
+
+const poseSequence = {
+  sequenceOne: ['poseOne', 'poseTwo'],
+  sequenceTwo: ['poseOne', 'poseTwo'],
+  sequenceThree: ['poseOne', 'poseTwo'],
+  sequenceFour: ['poseOne', 'poseTwo'],
+};
 
 class Main {
   constructor() {
@@ -38,7 +44,7 @@ class Main {
       main.pausePredicting();
     });
 
-    this.startWebcam();
+    this.initTrainButton();
   }
 
   startWebcam() {
@@ -60,6 +66,18 @@ class Main {
         );
       });
   }
+
+  initTrainButton() {
+    for (let i = 0; i < NUM_SEQUENCE; i++) {
+      for (let j = 0; j < NUM_POSE; j++) {
+        const button = document.getElementById(`btnS${i + 1}P${j + 1}`);
+        console.log(button.innerText);
+        button.addEventListener('mousedown', () => {
+          this.training = { i, j };
+        });
+      }
+    }
+  }
 }
 
 let main = null;
@@ -67,10 +85,15 @@ let main = null;
 window.addEventListener('load', () => {
   const ua = navigator.userAgent.toLocaleLowerCase();
 
+  const btnPredict = document.getElementById('start-predicting');
+
   if (!(ua.indexOf('chrome') != -1 || ua.indexOf('firefox') != -1)) {
     alert('Please visit in the latest Chrome or Firefox');
     return;
   }
 
   main = new Main();
+  btnPredict.addEventListener('click', () => {
+    main.startWebcam();
+  });
 });

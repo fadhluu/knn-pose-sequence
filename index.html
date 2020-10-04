@@ -14,50 +14,92 @@
     <div class="container">
       <div class="columns">
         <!-- Control -->
-        <div class="column">
-          <div class="field"><label for="" class="label">Sequence: </label>
-            <div class="field is-grouped">
+        <div class="column is-4">
+          <h4 class="title is-4">
+            Sequences:
+          </h4>
+          <div class="field">
+            <label for="" class="label">Sequence: One</label>
+            <div class="field is-grouped is-grouped-multiline">
               <div class="control">
                 <button class="button is-link" id="btnS1P1">Train Pose 1</button>
+                <p class="help">Confidence:
+                <p class="help">No Examples:
+              </div>
+              <div class="control">
                 <button class="button is-link" id="btnS1P2">Train Pose 2</button>
+                <p class="help">Confidence:
+                <p class="help">No Examples:
               </div>
             </div>
           </div>
-          <div class="field"><label for="" class="label">Sequence: </label>
-            <div class="field is-grouped">
+          <div class="field">
+            <label for="" class="label">Sequence: One</label>
+            <div class="field is-grouped is-grouped-multiline">
               <div class="control">
-                <button class="button is-link">Train Pose 1</button>
-                <button class="button is-link">Train Pose 2</button>
+                <button class="button is-link" id="btnS2P1">Train Pose 1</button>
+                <p class="help">Confidence:
+                <p class="help">No Examples:
               </div>
-            </div>
-          </div>
-          <div class="field"><label for="" class="label">Sequence: </label>
-            <div class="field is-grouped">
               <div class="control">
-                <button class="button is-link">Train Pose 1</button>
-                <button class="button is-link">Train Pose 2</button>
+                <button class="button is-link" id="btnS2P2">Train Pose 2</button>
+                <p class="help">Confidence:
+                <p class="help">No Examples:
               </div>
             </div>
           </div>
-          <div class="field"><label for="" class="label">Sequence: </label>
-            <div class="field is-grouped">
+          <div class="field">
+            <label for="" class="label">Sequence: One</label>
+            <div class="field is-grouped is-grouped-multiline">
               <div class="control">
-                <button class="button is-link">Train Pose 1</button>
-                <button class="button is-link">Train Pose 2</button>
+                <button class="button is-link" id="btnS3P1">Train Pose 1</button>
+                <p class="help">Confidence:
+                <p class="help">No Examples:
+              </div>
+              <div class="control">
+                <button class="button is-link" id="btnS3P2">Train Pose 2</button>
+                <p class="help">Confidence:
+                <p class="help">No Examples:
               </div>
             </div>
           </div>
-          <div class="field" id="train-button">
-
+          <div class="field">
+            <label for="" class="label">Sequence: One</label>
+            <div class="field is-grouped is-grouped-multiline">
+              <div class="control">
+                <button class="button is-link" id="btnS4P1">Train Pose 1</button>
+                <p class="help">Confidence:
+                <p class="help">No Examples:
+              </div>
+              <div class="control">
+                <button class="button is-link" id="btnS4P2">Train Pose 2</button>
+                <p class="help">Confidence:
+                <p class="help">No Examples:
+              </div>
+            </div>
           </div>
         </div>
         <!-- Webcam -->
         <div class="column is-8">
-          <h3 class="title">
-            Webcam
-          </h3>
+          <h4 class="title is-4">
+            Webcam Status: <p id="status"></p>
+          </h4>
           <div id="webcam">
             <video id="video" width="480" height="480" src='' muted autoplay playsinline></video>
+          </div>
+        </div>
+      </div>
+      <div class="columns has-text-centered">
+        <div class="column is-12">
+          <div class="field">
+            <label for="" class="label">Control</label>
+            <div class="field">
+              <div class="control">
+                <button class="button is-info">Save Model</button>
+                <button class="button is-warning">Load Model</button>
+                <button class="button is-success" id="start-predicting">Start Predicting</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
